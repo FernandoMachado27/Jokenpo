@@ -67,6 +67,9 @@ public class Client{
 				ValueReq valueReq = new ValueReq(p1, p2);
 				out.writeObject(valueReq);
 				ValueResp valueResp = (ValueResp) in.readObject();
+				
+				JOptionPane.showMessageDialog(null, "O Player 1 escolheu: " + valueReq.getP1(), "Aviso", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "O Player 2 escolheu: " + valueReq.getP2(), "Aviso", JOptionPane.INFORMATION_MESSAGE);
 
 				JOptionPane.showMessageDialog(null, valueResp.getVencedor(), "Aviso", JOptionPane.INFORMATION_MESSAGE);
 				System.out.println("Vencedor: " + valueResp.getVencedor());
