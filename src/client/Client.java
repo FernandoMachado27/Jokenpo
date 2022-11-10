@@ -5,7 +5,10 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.Random;
 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 
 import server.Computer;
 import util.ValueReq;
@@ -41,8 +44,25 @@ public class Client{
 					"Clique no botão", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
 
 			if (op == 0) {
-				p1 = JOptionPane.showInputDialog(null, "Player 1, digite abaixo sua escolha: ", "Player 1", 1);
-				p2 = JOptionPane.showInputDialog(null, "Player 2, digite abaixo sua escolha: ", "Player 2", 1);
+				JPasswordField password = new JPasswordField(10);
+				password.setEchoChar('*'); 
+				JLabel rotulo = new JLabel("Player 1, digite ao lado a sua escolha:");
+				JPanel entUsuario = new JPanel();
+				entUsuario.add(rotulo);
+				entUsuario.add(password);
+				JOptionPane.showMessageDialog(null, entUsuario, "Player 1", JOptionPane.PLAIN_MESSAGE);
+				
+				p1 = password.getText();
+				
+				JPasswordField password2 = new JPasswordField(10);
+				password2.setEchoChar('*'); 
+				JLabel rotulo2 = new JLabel("Player 2, digite ao lado a sua escolha:");
+				JPanel entUsuario2 = new JPanel();
+				entUsuario2.add(rotulo2);
+				entUsuario2.add(password2);
+				JOptionPane.showMessageDialog(null, entUsuario2, "Player 2", JOptionPane.PLAIN_MESSAGE);
+				
+				p2 = password2.getText();
 
 				ValueReq valueReq = new ValueReq(p1, p2);
 				out.writeObject(valueReq);
@@ -64,7 +84,7 @@ public class Client{
 				
 				ValueResp valueResp = (ValueResp) in.readObject();
 				
-				JOptionPane.showMessageDialog(null, "O Computador escolheu: " + valueReq.getP2(), "Aviso", JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null, "O Computador (player 2) escolheu: " + valueReq.getP2(), "Aviso", JOptionPane.INFORMATION_MESSAGE);
 				
 				JOptionPane.showMessageDialog(null, valueResp.getVencedor(), "Aviso", JOptionPane.INFORMATION_MESSAGE);
 				System.out.println("Vencedor: " + valueResp.getVencedor());
