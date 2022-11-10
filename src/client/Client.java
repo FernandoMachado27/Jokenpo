@@ -3,7 +3,6 @@ package client;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.Random;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -45,7 +44,7 @@ public class Client{
 
 			if (op == 0) {
 				JPasswordField password = new JPasswordField(10);
-				password.setEchoChar('*'); 
+				password.getEchoChar(); 
 				JLabel rotulo = new JLabel("Player 1, digite ao lado a sua escolha:");
 				JPanel entUsuario = new JPanel();
 				entUsuario.add(rotulo);
@@ -55,7 +54,7 @@ public class Client{
 				p1 = password.getText();
 				
 				JPasswordField password2 = new JPasswordField(10);
-				password2.setEchoChar('*'); 
+				password2.getEchoChar(); 
 				JLabel rotulo2 = new JLabel("Player 2, digite ao lado a sua escolha:");
 				JPanel entUsuario2 = new JPanel();
 				entUsuario2.add(rotulo2);
