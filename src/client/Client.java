@@ -41,6 +41,9 @@ public class Client{
 
 			op = JOptionPane.showOptionDialog(null, "Deseja jogar Player x Player ou Player x Computador?",
 					"Clique no botão", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, options, options[0]);
+			
+			JOptionPane.showMessageDialog(null, "Você deverá seguir o padrão de primeira letra maiúscula e as demais minúsculas. Ex: Papel", "Aviso",
+					JOptionPane.INFORMATION_MESSAGE);
 
 			if (op == 0) {
 				JPasswordField password = new JPasswordField(10);
