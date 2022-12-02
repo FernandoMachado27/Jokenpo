@@ -8,7 +8,7 @@ public class Server {
 	public static void main(String[] args) {
 		
 		ServerSocket serverSocket;
-		final int PORT = 0005;
+		final int PORT = 1001;
 		
 		try {
 			serverSocket = new ServerSocket(PORT);

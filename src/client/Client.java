@@ -17,7 +17,7 @@ public class Client{
 
 	public static void main(String[] args) {
 		Socket socket;
-		final int PORT = 0005;
+		final int PORT = 1001;
 		final String IP = "127.0.0.1";
 		ObjectOutputStream out;
 		ObjectInputStream in;
@@ -29,11 +29,6 @@ public class Client{
 			socket = new Socket(IP, PORT);
 			out = new ObjectOutputStream(socket.getOutputStream());
 			in = new ObjectInputStream(socket.getInputStream());
-
-			System.out.println("==============================");
-			System.out.println("Seja Bem-Vindo ao game Jokenpô");
-			System.out.println("==============================");
-			System.out.println("Os players devem escolher entre Pedra, Papel e Tesoura");
 
 			JOptionPane.showMessageDialog(null, "Seja Bem-Vindo ao game Jokenpô", "Aviso", JOptionPane.WARNING_MESSAGE);
 			JOptionPane.showMessageDialog(null, "Os players devem escolher entre Pedra, Papel e Tesoura", "Aviso",
