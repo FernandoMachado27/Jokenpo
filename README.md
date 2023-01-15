@@ -29,10 +29,3 @@ Um editor de código fonte que consiga rodar um programa em Java.
 3 - Execute a classe Server.\
 4 - Execte a classe Client .\
 5 - Jogue e se divirta!
-  
- 
-## Autores
- 
-* **Arthur Cassemiro**: RA:125111375561
-* **Fernando Machado**: RA:125111352882
-* **Henrique Pedrosa**: RA:125111362170
