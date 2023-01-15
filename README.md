@@ -1,4 +1,4 @@
-# Trabalho de sistemas distribuídos
+# Projeto Sistemas Distribuídos
 ## Jogo Jokenpo - Servidor/Cliente.
 O projeto é inspirado no clássico jogo de pedra, papel ou tesoura (apelidado de jokenpo). Para a realização, foi implementado o sistema de servidor/cliente. A maneira como o programa funciona é que uma conexão deve ser feita entre o servidor e o cliente usando a classe ServerSocket(). 
 
